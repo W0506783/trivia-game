@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Quiz App</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div id="app" class="w-full max-w-md bg-white rounded-lg shadow-lg p-6">
+    
+    <!-- Start Screen -->
+<div id="start-screen" class="text-center">
+  <h1 class="text-2xl font-bold mb-4">Trivia Quiz</h1>
+
+  <label class="block mb-2">Select category:</label>
+  <select id="category-select" class="border rounded px-2 py-1 mb-4 w-full">
+    <option value="">Any Category</option>
+    <option value="9">General Knowledge</option>
+    <option value="17">Science & Nature</option>
+    <option value="23">History</option>
+    <option value="18">Computers</option>
+    <option value="21">Sports</option>
+    <option value="12">Music</option>
+  </select>
+
+  <label class="block mb-2 mt-2">Number of questions:</label>
+  <input type="number" id="num-questions" value="5" min="1" max="20" class="border rounded px-2 py-1 mb-4 w-24 text-center">
+
+  <button id="start-btn" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Start Quiz</button>
+</div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="hidden">
+      <h2 id="question-text" class="text-lg font-semibold mb-4"></h2>
+      <div id="answers" class="space-y-2"></div>
+      <p id="feedback" class="mt-2 font-semibold"></p>
+      <p id="question-count" class="mt-4 text-sm text-gray-500"></p>
+    </div>
+
+    <!-- End Screen -->
+    <div id="end-screen" class="hidden text-center">
+      <h2 class="text-2xl font-bold mb-4">Quiz Finished!</h2>
+      <p id="final-score" class="text-lg mb-4"></p>
+      <button id="restart-btn" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Restart Quiz</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
